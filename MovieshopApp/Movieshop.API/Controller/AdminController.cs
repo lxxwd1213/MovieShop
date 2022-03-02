@@ -7,5 +7,10 @@ namespace Movieshop.API.Controller
     [ApiController]
     public class AdminController : ControllerBase
     {
+        [Route("{id:int}")]
+        public IActionResult Get(int id)
+        {
+            return Ok();
+        }
     }
 }

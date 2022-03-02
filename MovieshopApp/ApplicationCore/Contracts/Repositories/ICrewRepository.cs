@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationCore.Entities;
 
-namespace Infrastructure.Repository
+namespace ApplicationCore.Contracts.Repositories
 {
-    internal class ReportRepository
+    public interface ICrewRepository:IRepository<Crew>
     {
     }
 }

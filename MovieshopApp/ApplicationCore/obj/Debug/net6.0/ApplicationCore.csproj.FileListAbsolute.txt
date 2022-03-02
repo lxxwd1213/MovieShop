@@ -1,0 +1,15 @@
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\bin\Debug\net6.0\ApplicationCore.exe
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\bin\Debug\net6.0\ApplicationCore.deps.json
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\bin\Debug\net6.0\ApplicationCore.runtimeconfig.json
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\bin\Debug\net6.0\ApplicationCore.dll
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\bin\Debug\net6.0\ApplicationCore.pdb
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.csproj.AssemblyReference.cache
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.AssemblyInfoInputs.cache
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.AssemblyInfo.cs
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.dll
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\refint\ApplicationCore.dll
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.pdb
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ApplicationCore.genruntimeconfig.cache
+C:\Xiaoxu Li\C#\MovieShop\MovieshopApp\ApplicationCore\obj\Debug\net6.0\ref\ApplicationCore.dll

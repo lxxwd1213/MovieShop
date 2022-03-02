@@ -3,10 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationCore.Contracts.Repositories;
+using ApplicationCore.Contracts.Services;
+using ApplicationCore.Models;
 
 namespace Infrastructure.Services
 {
-    internal class CastService
+    public class CastService : ICastService
     {
+        private readonly ICastRepository _castRepository;
+
+        public CastService(ICastRepository castRepository)
+        {
+            _castRepository = castRepository;
+        }
+        public CastResponseModel GetAllCast(int id)
+        {
+
+            var castDeatil = _castRepository.GetById(id);
+
+            var castModels = new CastResponseModel
+            {
+                Id = castDeatil.Id,
+                Name = castDeatil.Name,
+                Gender = castDeatil.Gender,
+
+                ProfilePath = castDeatil.ProfilePath
+            };
+
+
+            return castModels;
+        }
     }
 }
+

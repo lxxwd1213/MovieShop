@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationCore.Contracts.Repositories;
+using ApplicationCore.Entities;
+using Infrastructure.Data;
 
 namespace Infrastructure.Repository
 {
-    internal class CastRepository
+    public class CastRepository : BaseRepository<Cast>, ICastRepository
     {
+        public CastRepository(MovieShopDbContext _con) : base(_con)
+        {
+        }
     }
 }

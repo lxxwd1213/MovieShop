@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ApplicationCore.Entities;
 
 namespace ApplicationCore.Contracts.Repositories
 {
-    internal interface IUserRepository
+    public interface IUserRepository:IRepository<User>
     {
     }
 }
