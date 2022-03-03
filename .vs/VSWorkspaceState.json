@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\MovieshopApp",
+    "\\MovieshopApp\\ApplicationCore",
+    "\\MovieshopApp\\ApplicationCore\\Entities",
     "\\MovieshopApp\\Movieshop.API"
   ],
-  "SelectedNode": "\\MovieshopApp\\Movieshop.API\\Startup.cs",
+  "SelectedNode": "\\MovieshopApp\\ApplicationCore\\Entities\\Movie.cs",
   "PreviewInSolutionExplorer": false
 }
