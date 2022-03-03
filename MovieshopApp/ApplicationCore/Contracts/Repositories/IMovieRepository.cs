@@ -14,6 +14,7 @@ namespace ApplicationCore.Contracts.Repositories
         List<Movie> Get30HighestRatedMovies();
         decimal GetMovieRating(int id);
         List<Movie> GetMoviesSameGenre(int id);
+
         PagedResultSet<Movie> GetMoviesByTitle(int pageSize = 30, int page = 1, string title = "");
 
 

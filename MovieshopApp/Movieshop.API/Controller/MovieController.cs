@@ -1,7 +1,6 @@
 ﻿using ApplicationCore.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Movieshop.API.ResponseModel;
 using ApplicationCore.Contracts.Repositories;
 using Infrastructure.Repository;
 using ApplicationCore.Contracts.Services;

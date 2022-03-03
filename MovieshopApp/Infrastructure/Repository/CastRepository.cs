@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Entities;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repository
 {
     public class CastRepository : BaseRepository<Cast>, ICastRepository
     {
-        public CastRepository(MovieShopDbContext _con) : base(_con)
+        MovieShopDbContext _db;
+        public CastRepository(MovieShopDbContext dbContext) : base(dbContext)
         {
+            _db = dbContext;
+        }
+        public Cast GetCast(int id)
+        { 
+            return _db.Casts.Where(x => x.Id == id).FirstOrDefault();   
         }
     }
 }

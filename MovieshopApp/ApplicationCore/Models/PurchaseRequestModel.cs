@@ -8,8 +8,8 @@ namespace ApplicationCore.Models
 {
     public class PurchaseRequestModel
     {
-        public Guid PurchaseNumber { get; set; } = Guid.NewGuid();
-        public DateTime PurchaseDateTime { get; set; } = DateTime.Now;
+        public Guid? PurchaseNumber { get; set; } = Guid.NewGuid();
+        public DateTime? PurchaseDateTime { get; set; } = DateTime.Now;
         public int MovieId { get; set; }
     }
 }

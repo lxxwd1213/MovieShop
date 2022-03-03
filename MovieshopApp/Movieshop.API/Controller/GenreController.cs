@@ -42,6 +42,7 @@ namespace Movieshop.API.Controller
             return NoContent();
         }
         [HttpPut]
+        [Route("{id:int}")]
         public IActionResult Put(GenreModel m)
         {
             if (genreServie.UpdateGenre(m) > 0)

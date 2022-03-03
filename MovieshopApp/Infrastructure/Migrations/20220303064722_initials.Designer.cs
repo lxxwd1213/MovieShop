@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(MovieShopDbContext))]
-    [Migration("20220302150108_Initials")]
-    partial class Initials
+    [Migration("20220303064722_initials")]
+    partial class initials
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,19 +33,15 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Gender")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ProfilePath")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TmdbUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -131,49 +127,42 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("BackdropUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Budget")
+                    b.Property<decimal?>("Budget")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("CreateDate")
+                    b.Property<DateTime?>("CreateDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ImdbUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("OriginalLanguage")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Overview")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PosterUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal?>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<DateTime>("ReleaseDate")
+                    b.Property<DateTime?>("ReleaseDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("Revenue")
+                    b.Property<decimal?>("Revenue")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("RunTime")
+                    b.Property<int?>("RunTime")
                         .HasColumnType("int");
 
                     b.Property<string>("Tagline")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -181,14 +170,12 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TmdbUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UpdatedBy")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
@@ -198,11 +185,11 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("ApplicationCore.Entities.MovieCast", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("MovieId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MovieId"), 1L, 1);
 
                     b.Property<int>("CastId")
                         .HasColumnType("int");
@@ -211,14 +198,14 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MovieId")
+                    b.Property<int>("MovieId1")
                         .HasColumnType("int");
 
-                    b.HasKey("Id");
+                    b.HasKey("MovieId");
 
                     b.HasIndex("CastId");
 
-                    b.HasIndex("MovieId");
+                    b.HasIndex("MovieId1");
 
                     b.ToTable("MovieCasts");
                 });
@@ -324,7 +311,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("ReviewText")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
@@ -348,7 +334,6 @@ namespace Infrastructure.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -372,7 +357,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrailerUrl")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -390,46 +374,40 @@ namespace Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("AccessFailedCount")
+                    b.Property<int?>("AccessFailedCount")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HashedPassword")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsLocked")
+                    b.Property<bool?>("IsLocked")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("LastLoginDateTime")
+                    b.Property<DateTime?>("LastLoginDateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("LastName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LockoutEndDate")
+                    b.Property<DateTime?>("LockoutEndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salt")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("TwoFactorEnabled")
+                    b.Property<bool?>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
@@ -489,7 +467,7 @@ namespace Infrastructure.Migrations
 
                     b.HasOne("ApplicationCore.Entities.Movie", "Movie")
                         .WithMany("MovieCast")
-                        .HasForeignKey("MovieId")
+                        .HasForeignKey("MovieId1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

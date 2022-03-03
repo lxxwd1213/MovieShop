@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ApplicationCore.Contracts.Repositories;
 using ApplicationCore.Models;
 using ApplicationCore.Contracts.Services;
+using ApplicationCore.Entities;
 
 namespace Infrastructure.Services
 {

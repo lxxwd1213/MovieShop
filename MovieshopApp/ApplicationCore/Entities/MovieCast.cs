@@ -9,7 +9,7 @@ namespace ApplicationCore.Entities
 {
     public class MovieCast
     {
-        public int Id { get; set; }
+        [Key]
         public int MovieId { get; set; }
         public int CastId { get; set; }
         public string Character { get; set; }
